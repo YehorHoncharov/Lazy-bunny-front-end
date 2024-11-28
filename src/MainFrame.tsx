@@ -2,7 +2,7 @@
 export function MainFrame(){
     return (
         <div>
-            <img src="/static/img/MainBunny.png" alt="" />
+            {/* <img className="imgBG" src="/static/img/MainBunny.png" alt="" /> */}
             <h1>LAZY</h1>
             <h1>BUNNY</h1>
             <h3>Movies picked for 

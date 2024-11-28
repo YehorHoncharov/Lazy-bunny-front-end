@@ -1,0 +1,11 @@
+/* *{
+    padding: 0%;
+    margin: 0%;
+} */
+
+.imgBG{
+    width: 100%;
+    height: 764px;
+    filter: brightness(30%); 
+    position: absolute;
+}
