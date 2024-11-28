@@ -1,10 +1,20 @@
-export function Card(){
+
+interface ICARDSProps {
+    name: string,
+    img: string,
+    rating: number,
+    year: number,
+    genre: string,
+    moodImg: string,
+}
+
+export function Card(props: ICARDSProps){
     return (
         <div className="card">
 
             <div>
                 <img src="/static/SaveCard.png" alt="" />
-                <img src="" alt="" />
+                <img src={props.img} alt="" />
             </div>
 
             <div>
@@ -13,23 +23,25 @@ export function Card(){
                 <img src="" alt="" />
                 <img src="" alt="" />
                 <img src="" alt="" />
-                <p></p>
+                <p>{props.rating}</p>
             </div>
 
             <div>
-                <h5></h5>
-                <p></p>
+                <p>{props.name}</p>
             </div>
+
+
 
             <div>
-
-                <div>
-                    <p></p>
-                    <img src="" alt="" />
-                </div>
-                <img src="" alt="" />
-
+                <p>{props.genre}</p>
+                <p>{props.year}</p>
+                
             </div>
+            <div>
+            <button>Trailer</button>
+            <img src={props.moodImg} alt="" />
+            </div>
+   
             
         </div>
     )
