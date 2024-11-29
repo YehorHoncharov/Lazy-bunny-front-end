@@ -1,14 +1,23 @@
+import "./css/MainFrame.css"
 
 export function MainFrame(){
     return (
-        <div>
-            {/* <img className="imgBG" src="/static/img/MainBunny.png" alt="" /> */}
-            <h1>LAZY</h1>
-            <h1>BUNNY</h1>
-            <h3>Movies picked for 
-                your mood, 
-                relax and enjoy!</h3>
-            <button>Start </button>
+        <div className="mainFrame">
+            <div className="lazyFrame">
+
+                <div>
+                    <h1 className="lazybunny">LAZY</h1>
+                    <h1 className="lazybunny">BUNNY</h1>
+                </div>
+
+                <div>
+                <h3 id="textFrame">Movies picked for </h3>
+                <h3 id="textFrame">your mood, </h3>
+                <h3 id="textFrame">relax and enjoy!</h3>
+                </div>
+
+                <button id="buttonStart">Start picking!</button>
+            </div>
         </div>
     )
 }

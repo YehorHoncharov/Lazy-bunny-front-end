@@ -1,3 +1,5 @@
+import './css/CardBunny.css'
+
 
 interface ICARDSProps {
     name: string,
@@ -13,32 +15,33 @@ export function Card(props: ICARDSProps){
         <div className="card">
 
             <div>
-                <img src="/static/SaveCard.png" alt="" />
-                <img src={props.img} alt="" />
+                <button className="saveButton"><img src="/static/img/SaveCard.png" alt="" /></button>
+                <img src={props.img} alt="" className='movieImg'/>
+            </div>
+
+            <div className='rating'>
+                <img src="/static/img/FullStar.png" alt="" />
+                <img src="/static/img/FullStar.png" alt="" />
+                <img src="/static/img/FullStar.png" alt="" />
+                <img src="/static/img/FullStar.png" alt="" />
+                <img src="/static/img/HalfStar.png" alt="" />
+                <p>{props.rating}/5</p>
             </div>
 
             <div>
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <img src="" alt="" />
-                <p>{props.rating}</p>
-            </div>
-
-            <div>
-                <p>{props.name}</p>
+                <p className='movieLables movieName'>{props.name}</p>
             </div>
 
 
 
             <div>
-                <p>{props.genre}</p>
-                <p>{props.year}</p>
+                <p className='movieLables movieData'>{props.year}, {props.genre}</p>
+                
+                
                 
             </div>
-            <div>
-            <button>Trailer</button>
+            <div className='buttonAndMood'>
+            <button className='buttonTrailer'>Trailer</button>
             <img src={props.moodImg} alt="" />
             </div>
    

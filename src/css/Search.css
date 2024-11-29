@@ -1,0 +1,27 @@
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBunny{
+    height: 97px;
+    width: 154px;
+    display: block;
+}
+
+.input{
+    width: 629px;
+    height: 83px;
+    border-radius: 15px;
+}
+
+.searchInput{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start;
+    margin: 0; /* Забираємо зовнішні відступи */
+    /* padding: 100px; Встановлюємо потрібний внутрішній відступ */
+}

@@ -6,6 +6,7 @@
     align-items: center;
     padding-right: 20px;
     background-color: transparent;
+    border: solid rgb(255, 255, 255) ;
 }
 
 .text{
@@ -13,7 +14,7 @@
     font-size: 32px;
     text-decoration: none;
     font-weight: bold;
-    color: #000000;
+    color: rgb(255, 255, 255);
 }
 
 .buttonProfile{
@@ -22,7 +23,9 @@
     font-family: "Comic Sans MS", cursive;
     font-size: 32px;
     font-weight: bold;
+    color: rgb(255, 255, 255);
     background-color: transparent;
-    border: 1 solid black ;
+    border: 1 solid rgb(255, 255, 255) ;
     border-radius: 15px;
+    cursor: pointer;
 }

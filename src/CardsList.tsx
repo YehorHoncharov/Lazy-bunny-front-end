@@ -1,23 +1,23 @@
 import {Card} from './CardBunny' 
+import './css/CardsList.css'
+// interface ICategory {
+//     categoryName: string
+//     cardList: []
+// }
 
-interface ICategory {
-    categoryName: string
-    cardList: []
-}
-
-export function CardsList(props: ICategory){
+export function CardsList(){
     const cards = [
-        {id: 0, name: 'Inglourious Basterds', img: '', rating: 4, year: 2009, genre: 'thriller', moodImg: ''},
-        {id: 1, name: 'Inglourious Basterds', img: '', rating: 4, year: 2009, genre: 'thriller', moodImg: ''},
-        {id: 2, name: 'Inglourious Basterds', img: '', rating: 4, year: 2009, genre: 'thriller', moodImg: ''},
-        {id: 3, name: 'Inglourious Basterds', img: '', rating: 4, year: 2009, genre: 'thriller', moodImg: ''},
-        {id: 4, name: 'Inglourious Basterds', img: '', rating: 4, year: 2009, genre: 'thriller', moodImg: ''}
+        {id: 0, name: 'Django Unchained', img: '/static/img/DjangoFilm.png', rating: 4, year: 2009, genre: 'thriller', moodImg: '/static/img/CardBadBunny.png'},
+        {id: 1, name: 'Django Unchained', img: '/static/img/DjangoFilm.png', rating: 4, year: 2009, genre: 'thriller', moodImg: '/static/img/CardBadBunny.png'},
+        {id: 2, name: 'Django Unchained', img: '/static/img/DjangoFilm.png', rating: 4, year: 2009, genre: 'thriller', moodImg: '/static/img/CardBadBunny.png'},
+        {id: 3, name: 'Django Unchained', img: '/static/img/DjangoFilm.png', rating: 4, year: 2009, genre: 'thriller', moodImg: '/static/img/CardBadBunny.png'},
+        {id: 4, name: 'Django Unchained', img: '/static/img/DjangoFilm.png', rating: 4, year: 2009, genre: 'thriller', moodImg: '/static/img/CardBadBunny.png'},
     ]
 
     return (
-        <div>
-            <h1>{props.categoryName}</h1>
-            {{props.cardList}.map((card) =>{
+        <div className='cardsList'>
+            
+            {cards.map((card) =>{
 
                 return <Card key={card.id} name={card.name} img={card.img} rating={card.rating} year={card.year} genre={card.genre} moodImg={card.moodImg}></Card>
             })}
