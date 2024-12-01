@@ -1,5 +1,5 @@
-import { MainPage } from "./MainPage";
-import "./css/MovieApp.css"
+import { MainPage } from "./MainPage/MainPage";
+import "./MovieApp.css"
 
 // создаем компонент App
 export function MovieApp(){

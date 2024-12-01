@@ -1,9 +1,9 @@
-import { Footer } from './Footer'
-import { Header } from './Header'
-import { CategoriesOfMovies } from './CategoriesOfMovies'
-import { MainFrame } from './MainFrame'
-import { Search } from './Search'
-import "./css/MainPage.css"
+import { Footer } from '../Footer/Footer'
+import { Header } from '../Header/Header'
+import { CategoriesOfMovies } from '../CategoriesOfMovies/CategoriesOfMovies'
+import { MainFrame } from '../MainFrame/MainFrame'
+import { Search } from '../Search/Search'
+import "./MainPage.css"
 
 export function MainPage(){
     return (

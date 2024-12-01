@@ -1,4 +1,4 @@
-import "./css/MainFrame.css"
+import "./MainFrame.css"
 
 export function MainFrame(){
     return (

@@ -1,5 +1,5 @@
-import {Card} from './CardBunny' 
-import './css/CardsList.css'
+import {Card} from '../CardBunny/CardBunny' 
+import './CardsList.css'
 // interface ICategory {
 //     categoryName: string
 //     cardList: []

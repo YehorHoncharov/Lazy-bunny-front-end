@@ -1,4 +1,4 @@
-import './css/CardBunny.css'
+import './CardBunny.css'
 
 
 interface ICARDSProps {
@@ -41,7 +41,8 @@ export function Card(props: ICARDSProps){
                 
             </div>
             <div className='buttonAndMood'>
-            <button className='buttonTrailer'>Trailer</button>
+            <button className='buttonTrailer'><img src="/static/img/triangleCardBunny.png" alt="" /> <p>Trailer</p></button>
+            <img src="" alt="" />
             <img src={props.moodImg} alt="" />
             </div>
    

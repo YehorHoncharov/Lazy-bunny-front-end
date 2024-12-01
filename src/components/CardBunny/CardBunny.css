@@ -25,7 +25,19 @@
 .saveButton{
     position: absolute;
     cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    padding-left: 3px;
+    padding-top: 3px;
+    transition: 0.3s ease-out;
+    
 }
+
+.saveButton:hover{
+    /* opacity: 0.8; */
+    height: 70px;
+}
+
 
 .rating{
     display: flex;
@@ -36,6 +48,11 @@
 }
 
 .buttonTrailer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 131px;
     height: 36px;
     background-color: #DEA727;
@@ -44,15 +61,21 @@
     font-weight: 400;
     color: #FFFFFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     
+}
+
+.buttonTrailer:hover{
+    background-color: #9b7d36;
+    /* filter: sepia(1) hue-rotate(320deg) saturate(10); */
 }
 
 .buttonAndMood{
     display: flex;
     flex-direction: row;
-    gap: 25px;
-    padding-left: 12px;
-    padding-right: 12px;
+    gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 6px;
     
 }
@@ -71,3 +94,4 @@
     font-weight: 700;
     font-size: 12px;
 }
+
