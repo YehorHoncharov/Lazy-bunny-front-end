@@ -45,6 +45,7 @@
     padding: 6px;
     font-weight: 700;
     align-items: center;
+    gap: 7px;
 }
 
 .buttonTrailer{
@@ -88,10 +89,15 @@
     
     font-weight: 700;
     font-size: 20px;
+    color: black;
 }
 
 .movieData{
     font-weight: 700;
     font-size: 12px;
+    color: #434141
 }
 
+a{
+    text-decoration: none;
+}
