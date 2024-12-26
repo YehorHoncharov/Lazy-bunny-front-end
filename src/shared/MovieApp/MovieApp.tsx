@@ -1,5 +1,6 @@
-import { AllMovies } from "./AllMovies/AllMovies";
-import { MainPage } from "./MainPage/MainPage";
+import { AllMovies } from "../../pages/AllMovies/AllMovies";
+import { FilmPage } from "../FilmPage/FilmPage";
+import { MainPage } from "../../pages/MainPage/MainPage";
 import "./MovieApp.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
@@ -11,7 +12,7 @@ export function MovieApp(){
                     <Routes>
                         <Route path="/" element={<MainPage />} />
                         <Route path="/movies" element={<AllMovies></AllMovies>} />
-                        
+                        <Route path="/movie/:id" element={<FilmPage></FilmPage>}/>
 
                     </Routes>
                 
