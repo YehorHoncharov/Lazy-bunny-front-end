@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.textFilter{
+    font-family: "Mochiy Pop P One", sans-serif;
+    font-size: 64px;
+    color: white;
+    margin-top: 50px;
+}
+
+.filter {
+    display: flex;
+    width: 1249px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: #596786;
+    opacity: 90%;
+    border-radius: 7px;
+    padding: 12px 12px;
+    margin-bottom: 31px;
+    gap: 80px;
+    /* margin-bottom: 200px; */
+}
+
+
+
+.allMoviesPage{
+    background-image: url("../../../public/static/img/MainPage.png");
+    background-size: cover; /* Зображення розтягується, щоб покрити весь блок */
+    background-repeat: no-repeat; /* Зображення не повторюється */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.filterOfFilms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 17px; /* >17 selectGenre top*/
+    margin-bottom: 20px;
+    /* margin-bottom: 200px; */
+}
+
+.chooseGenre{
+    width: 351px;
+    height: 64px;
+    background-color: #5861AD;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+    appearance: none;
+    /* margin-bottom: 60px; */
+    /* margin-bottom: 100px; */
+}
+
+.chooseYear{
+    width: 351px;
+    height: 64px;
+    background-color: #5861AD;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+    appearance: none;
+    /* margin-bottom: 15px; */
+}
+
+.chooseFilter{
+    width: 351px;
+    height: 64px;
+    background-color: #5861AD;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+    appearance: none; 
+    /* margin-bottom: 15px; */
+}

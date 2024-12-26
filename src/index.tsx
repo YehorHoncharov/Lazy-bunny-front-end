@@ -1,5 +1,5 @@
 import {createRoot} from 'react-dom/client'
-import { MovieApp } from './MovieApp';
+import { MovieApp } from './shared/MovieApp/MovieApp';
 
 
 

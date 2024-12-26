@@ -1,11 +1,12 @@
-import "./css/Header.css"
+import { Link } from "react-router-dom"
+import "./Header.css"
 
 export function Header(){
     
     return(
         <header className="header">
-            <a href="/"><img src="/static/img/HeaderBunny.png" alt="" /></a>
-            <a href="/" className="text">Movies</a>
+            <Link to={'/'}><img src="/static/img/HeaderBunny.png" alt="" /></Link>
+            <Link to={'/movies'} className="text">Movies</Link>
             <a href="/" className="text">Shows</a>
             <a href="/" className="text">Mood</a>
             <a href="/" className="text">Search</a>

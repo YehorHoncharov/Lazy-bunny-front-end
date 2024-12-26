@@ -1,6 +1,6 @@
 
 .mainFrame{
-    background-image: url("../../public/static/img/MainBunny.png");
+    background-image: url("../../../public/static/img/MainBunny.png");
     background-size: cover; /* Зображення розтягується, щоб покрити весь блок */
     background-repeat: no-repeat; /* Зображення не повторюється */
     height: 920px;
@@ -44,4 +44,11 @@
     font-family: "Comic Sans MS", cursive;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+#buttonStart:hover{
+    width: 270px;
+    height: 81px;
+    background-color: FBF8F8;
 }

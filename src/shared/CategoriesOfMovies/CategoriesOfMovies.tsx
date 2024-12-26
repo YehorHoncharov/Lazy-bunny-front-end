@@ -1,6 +1,6 @@
 import React from "react"
-import { CardsList } from "./CardsList"
-import './css/CategoriesOfMovies.css'
+import { CardsList } from "../CardsList/CardsList"
+import './CategoriesOfMovies.css'
 
 
 export function CategoriesOfMovies(){

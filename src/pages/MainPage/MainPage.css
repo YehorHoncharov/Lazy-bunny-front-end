@@ -1,14 +1,11 @@
 
 .contener{
-    background-image: url("../../public/static/img/MainPage.png");
+    background-image: url("../../../public/static/img/MainPage.png");
     background-size: cover; /* Зображення розтягується, щоб покрити весь блок */
-    /* background-position: center; Вирівнювання по центру */
     background-repeat: no-repeat; /* Зображення не повторюється */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    /* height: auto; */
-    /* min-height: 100vh; */
-    /* overflow: hidden */
+    overflow: hidden
 }

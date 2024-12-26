@@ -1,9 +1,9 @@
-import { Footer } from './Footer'
-import { Header } from './Header'
-import { CategoriesOfMovies } from './CategoriesOfMovies'
-import { MainFrame } from './MainFrame'
-import { Search } from './Search'
-import "./css/MainPage.css"
+import { Footer } from '../../shared/Footer/Footer'
+import { Header } from '../../shared/Header/Header'
+import { CategoriesOfMovies } from '../../shared/CategoriesOfMovies/CategoriesOfMovies'
+import { MainFrame } from '../../shared/MainFrame/MainFrame'
+import { Search } from '../../shared/Search/Search'
+import "./MainPage.css"
 
 export function MainPage(){
     return (
@@ -15,7 +15,6 @@ export function MainPage(){
                 <Search />
                 <hr />
                 <CategoriesOfMovies />
-                <hr />
                 <Footer />
                 
         </div>
