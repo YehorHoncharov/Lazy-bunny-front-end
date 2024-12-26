@@ -1,9 +1,10 @@
 import { useFilmByID } from "../../hooks/useFilmByID"
 import { useParams } from "react-router-dom"
 import { Header } from "../Header/Header"
+import { Footer } from "../Footer/Footer"
 
 import "./FilmPage.css"
-import { Footer } from "../Footer/Footer"
+
 export function FilmPage(){
 
     const params = useParams()
@@ -13,11 +14,11 @@ export function FilmPage(){
         <div className="filmPage">
             <Header></Header>
             <div className="filmMainDiv">
-                <h1 id="filmFont">{film?.name}</h1>
+                <h1 id="filmFont">{film?.Name}</h1>
                 <div className="filmInfoDiv">
 
                     <div className="filmImgDiv">
-                       <img id="filmIMG" src={film?.img} alt="" /> 
+                       <img id="filmIMG" src={film?.Img} alt="" /> 
                        <div className='buttonAndMood'>
                             <button className='buttonTrailer'><img src="/static/img/triangleCardBunny.png" alt="" /> <p>Trailer</p></button>
                         </div>
@@ -26,15 +27,15 @@ export function FilmPage(){
                     <div className="filmTextDiv">
 
                         <p id="fontP">Release date:</p>
-                        <p id="fontP">Year: {film?.year}</p>
-                        <p id="fontP">Genre: {film?.genre}</p>
-                        <p id="fontP">Country: </p>
-                        <p id="fontP">Director:</p>
-                        <p id="fontP">Duration:</p>
-                        <p id="fontP">Screenwriter:</p>
-                        <p id="fontP">Language:</p>
-                        <p id="fontP">Film company: </p>
-                        <p id="fontP">Starring: </p>
+                        <p id="fontP">Year: {film?.Year}</p>
+                        <p id="fontP">Genre: {film?.Genre}</p>
+                        <p id="fontP">Country: {film?.Country}</p>
+                        <p id="fontP">Director:{film?.Director}</p>
+                        <p id="fontP">Duration: {film?.Duration}</p>
+                        <p id="fontP">Language:{film?.Language}</p>
+                        <p id="fontP">Film company: {film?.FilmCompany}</p>
+                        <p id="fontP">Starring: {film?.Starring}</p>
+                        <p id="fontP">Screenwriter: {film?.Screenwriter}</p>
 
                         <div className='rating'>
                             <img src="/static/img/FullStar.png" alt="" />
@@ -42,7 +43,7 @@ export function FilmPage(){
                             <img src="/static/img/FullStar.png" alt="" />
                             <img src="/static/img/FullStar.png" alt="" />
                             <img src="/static/img/HalfStar.png" alt="" />
-                            <p id="fontStar">{film?.rating}/5</p>
+                            <p id="fontStar">{film?.Rating}/5</p>
                         </div>
                     </div>
 
@@ -55,7 +56,7 @@ export function FilmPage(){
                     </div>
 
                     <div className="filmTextDescription">
-                        <p id="fontD">{film?.description}</p>
+                        <p id="fontD">{film?.Description}</p>
                     </div>
 
                 </div>

@@ -1,13 +1,33 @@
-import { useEffect, useState } from "react";
-import { cards } from "../pages/AllMovies/AllMovies";
+import { useState, useEffect } from 'react'
+import { IFilm } from './useGetAllFilms'
+
 
 export function useFilmByID(id: number) {
-    const [film, setFilm] = useState(() => cards.find(card => card.id === id) || null); 
+    const [film, setFilm] = useState<IFilm>()
+    const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState<string>()
 
     useEffect(() => {
-        const selectedFilm = cards.find(card => card.id === id); 
-        setFilm(selectedFilm || null);
-    }, [id]);
+        async function getFilm() {
+            try {
+                setIsLoading(true)
+                const response = await fetch('http://localhost:3001/movie/all')
+                const film = await response.json()
+                setFilm(film)
+            }
+            catch (error) {
+               
+                if (error instanceof Error){
+                    setError(error.message)
+                }
+                
+            }
+            finally {
+                setIsLoading(false)
+            }
+        }
+        getFilm()
+    }, [id])
 
-    return { film }; 
+    return {film: film, isLoading: isLoading, error: error}
 }
