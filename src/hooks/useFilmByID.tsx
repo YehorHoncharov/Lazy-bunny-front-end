@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { IFilm } from './useGetAllFilms'
 
 
-export function useFilmsByID(id: number) {
+export function useFilmByID(id: number) {
     const [film, setFilm] = useState<IFilm>()
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState<string>()
