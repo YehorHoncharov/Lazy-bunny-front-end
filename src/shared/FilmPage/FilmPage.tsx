@@ -1,5 +1,5 @@
 import { useFilmByID } from "../../hooks/useFilmByID"
-import { Link, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Header } from "../Header/Header"
 
 import "./FilmPage.css"
