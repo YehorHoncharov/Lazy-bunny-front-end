@@ -1,23 +1,5 @@
 import { useEffect, useState } from "react"
-
-export interface IFilm{
-    id: number,
-    Name: string,
-    ReleaseDate: string,
-    Year: number,
-    Genre: string,
-    Country: string,
-    Director: string,
-    Duration: string,
-    Screenwriter: string,
-    Description: string,
-    Language: string,
-    FilmCompany: string,
-    Starring: string,
-    MoodImg: string,
-    Img: string,
-    Rating: number,
-}
+import { IFilm } from "./types"
 
 export function useGetAllFilms(){
     const [films, setFilms] = useState<IFilm[]>([])
@@ -30,8 +12,8 @@ export function useGetAllFilms(){
                 const response = await fetch('http://localhost:3001/movie/all')
                 const films = await response.json()
                 setFilms(films)
-                console.log(films)
-            }
+                console.log('data from back-end:', films);
+                }
             catch(error){
                 if (error instanceof Error){
                     setError(error.message)

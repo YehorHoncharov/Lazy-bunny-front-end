@@ -1,0 +1,115 @@
+.filmMainFrame{
+    background-image: url("../../../public/static/img/FilmMainFrame.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 920px;
+    width: auto;
+}
+
+.filmFrame{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.movieInformationBlock{
+    display: flex;
+    justify-content: space-between;
+}
+
+#filmRating{
+    font-size: 24px;
+    font-family: "Inter", cursive;
+    font-weight: bold;
+}
+
+#filmName{
+    font-size: 32px;
+    font-family: "Inter", cursive;
+    font-weight: bold;
+}
+
+#filmYear{
+    font-size: 16px;
+    font-family: "Inter", cursive;
+    font-weight: bold;
+}
+
+
+#seeMore{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align-last: center;
+    justify-content: center;
+    gap: 10px;
+    width: 171px;
+    height: 36px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttonFilmTrailer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 171px;
+    height: 36px;
+    background-color: #DEA727;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movieInformationBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.genresOfFilms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.genre{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 91px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50px; */
+    font-size: 16px;
+    font-family: "Inter", cursive;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+}

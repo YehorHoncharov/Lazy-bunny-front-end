@@ -4,7 +4,6 @@ import { Footer } from "../../shared/Footer/Footer";
 import { Header } from "../../shared/Header/Header";
 import "./AllMovies.css";
 import { Card } from "../../shared/CardBunny/CardBunny";
-// import { CardsList } from "../../shared/CardsList/CardsList";
 import { ProgressBar } from "react-loader-spinner";
 import { useGetAllFilms } from "../../hooks/useGetAllFilms";
 import { useGenre } from "../../hooks/useGenre";
@@ -30,7 +29,9 @@ export function AllMovies() {
     } else {
       setFilteredMovies(
         films.filter((movie) => {
-          return movie.Genre === selectedGenre;
+          return movie.Genres.filter((genre) => { 
+            return genre.name === selectedGenre
+          })
         })
       );
     }
@@ -63,9 +64,11 @@ export function AllMovies() {
         >
           <option value="AllGenre">All genre</option>
 
-          {genres.map((genre) => {
-            return <option value={genre.Genre}>{genre.Genre}</option>;
-          })}
+          {/* {films.map((film) => {
+            return film.Genres.map((genre) => {
+              return <option value={genre.name}>{genre.name}</option>;
+            })
+          })} */}
         </select>
 
         // <select className="chooseYear">
@@ -92,25 +95,7 @@ export function AllMovies() {
           error === undefined ? (
             filteredMovies.map((card) => {
               return (
-                <Card
-                  key={card.id}
-                  id={card.id}
-                  Name={card.Name}
-                  ReleaseDate={card.ReleaseDate}
-                  Img={card.Img}
-                  Rating={card.Rating}
-                  Year={card.Year}
-                  Description={card.Description}
-                  Genre={card.Genre}
-                  MoodImg={card.MoodImg}
-                  Screenwriter={card.Screenwriter}
-                  FilmCompany={card.FilmCompany}
-                  Country={card.Country}
-                  Starring={card.Starring}
-                  Director={card.Director}
-                  Language={card.Language}
-                  Duration={card.Duration}
-                ></Card>
+                <Card film={card}></Card>
               );
             })
           ) : (

@@ -1,16 +1,21 @@
 import { Link } from 'react-router-dom'
 import './CardBunny.css'
-import { IFilm } from '../../hooks/useGetAllFilms'
+import { IFilm } from '../../hooks/types'
 
+interface ICardFilm{
+    film: IFilm
+}
 
-export function Card(props: IFilm){
+export function Card(props: ICardFilm){
+    const {film} = props
+    
     return (
-        <Link to={`/movie/${props.id}`} >
+        <Link to={`/movie/${film.id}`} >
             <div className="card">
 
                 <div>
                     <button className="saveButton"><img src="/static/img/SaveCard.png" alt="" /></button>
-                    <img src={props.Img} alt="" className='movieImg'/>
+                    <img src={film.Img} alt="" className='movieImg'/>
                 </div>
 
                 <div className='rating'>
@@ -19,17 +24,18 @@ export function Card(props: IFilm){
                     <img src="/static/img/FullStar.png" alt="" />
                     <img src="/static/img/FullStar.png" alt="" />
                     <img src="/static/img/HalfStar.png" alt="" />
-                    <p>{props.Rating}/5</p>
+                    <p>{film.Rating}/5</p>
                 </div>
 
                 <div>
-                    <p className='movieLables movieName'>{props.Name}</p>
+                    <p className='movieLables movieName'>{film.Name}</p>
                 </div>
 
 
 
                 <div>
-                    <p className='movieLables movieData'>{props.Year}, {props.Genre}</p>
+                    <p className='movieLables movieData'>{film.Year}
+                    </p>
                     
                     
                     
@@ -37,7 +43,7 @@ export function Card(props: IFilm){
                 <div className='buttonAndMood'>
                     <button className='buttonTrailer'><img src="/static/img/triangleCardBunny.png" alt="" /> <p>Trailer</p></button>
                     <img src="" alt="" />
-                    <img src={props.MoodImg} alt="" />
+                    <img src={film.MoodImg} alt="" />
                 </div>
     
                 

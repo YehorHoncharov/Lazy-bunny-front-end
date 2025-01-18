@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { IFilm } from './useGetAllFilms'
+import { IFilm } from './types'
 
 
 export function useFilmByID(id: number) {
@@ -11,7 +11,7 @@ export function useFilmByID(id: number) {
         async function getFilm() {
             try {
                 setIsLoading(true)
-                const response = await fetch('http://localhost:3001/movie/all')
+                const response = await fetch(`http://localhost:3001/movie/${id}`)
                 const film = await response.json()
                 setFilm(film)
             }
@@ -29,5 +29,8 @@ export function useFilmByID(id: number) {
         getFilm()
     }, [id])
 
+    
     return {film: film, isLoading: isLoading, error: error}
+
+    
 }

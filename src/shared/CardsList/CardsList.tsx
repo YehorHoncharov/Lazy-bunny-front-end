@@ -12,24 +12,25 @@ export function CardsList() {
         error === undefined ? (
           films.map((card) => {
             return (
-              <Card
-                key={card.id}
-                id={card.id}
-                Name={card.Name}
-                ReleaseDate={card.ReleaseDate}
-                Img={card.Img}
-                Rating={card.Rating}
-                Year={card.Year}
-                Description={card.Description}
-                Genre={card.Genre}
-                MoodImg={card.MoodImg}
-                Screenwriter={card.Screenwriter}
-                FilmCompany={card.FilmCompany}
-                Country={card.Country}
-                Starring={card.Starring}
-                Director={card.Director}
-                Language={card.Language}
-                Duration={card.Duration}
+              <Card film={card}
+                // key={card.id}
+                // id={card.id}
+                // Name={card.Name}
+                // ReleaseDate={card.ReleaseDate}
+                // Img={card.Img}
+                // Rating={card.Rating}
+                // Year={card.Year}
+                // Description={card.Description}
+                // Genres={card.Genres}
+                // MoodImg={card.MoodImg}
+                // Screenwriter={card.Screenwriter}
+                // FilmCompany={card.FilmCompany}
+                // Country={card.Country}
+                // Starring={card.Starring}
+                // Director={card.Director}
+                // Language={card.Language}
+                // Duration={card.Duration}
+                // Comments={card.Comments}
               ></Card>
             );
           })
@@ -53,3 +54,5 @@ export function CardsList() {
     </div>
   );
 }
+
+
