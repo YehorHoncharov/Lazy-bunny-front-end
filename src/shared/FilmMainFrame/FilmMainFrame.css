@@ -1,17 +1,22 @@
 .filmMainFrame{
-    background-image: url("../../../public/static/img/FilmMainFrame.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/static/img/bg1.webp");
     background-size: cover; 
     background-repeat: no-repeat;
-    height: 920px;
+    height: 788px;
     width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 170px;
+    /* opacity: 0.4; */
 }
 
 .filmFrame{
-    padding-left: 40px;
+    padding-left: 70px;
     padding-right: 40px;
-    padding-top: 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     gap: 26px;
 }
 
@@ -22,20 +27,34 @@
 
 #filmRating{
     font-size: 24px;
+    color: #A7A4A4;
     font-family: "Inter", cursive;
     font-weight: bold;
+    display: inline;
+    margin: 0;
 }
 
 #filmName{
     font-size: 32px;
     font-family: "Inter", cursive;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 #filmYear{
     font-size: 16px;
     font-family: "Inter", cursive;
     font-weight: bold;
+    color: #A7A4A4;
+}
+
+#yellow{
+    color: yellow;
+    font-size: 20px;
+    font-family: "Inter", cursive;
+    font-weight: bold;
+    display: inline;
+    margin: 0;
 }
 
 
@@ -60,6 +79,8 @@
 .buttonInfo{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -89,6 +110,7 @@
 .genresOfFilms{
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 10px;
     max-width: 300px;
 }

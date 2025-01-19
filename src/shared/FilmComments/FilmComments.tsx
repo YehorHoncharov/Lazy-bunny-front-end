@@ -21,13 +21,15 @@ export function FilmComments(props: IFilmCommentsProps){
                 <button className="sendComment">Send</button>
             </div>
             
-            {film.Comments.map((comment) =>{
-                    return <CardComment 
-                    author={comment.author}
-                    text={comment.text}
-                    commentId={comment.commentId}>      
-                    </CardComment>
-            })}
+            <div className="commentsDiv">
+                {film.Comments.map((comment) =>{
+                        return <CardComment 
+                        author={comment.author}
+                        text={comment.text}
+                        commentId={comment.commentId}>      
+                        </CardComment>
+                })}
+            </div>
             
             
         </div>

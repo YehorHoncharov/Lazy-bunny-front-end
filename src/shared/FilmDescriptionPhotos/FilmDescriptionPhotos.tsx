@@ -4,6 +4,8 @@ import { IFilm } from "../../hooks/types";
 import { ProgressBar } from "react-loader-spinner";
 import { Card } from "../CardBunny/CardBunny";
 
+import "./FilmDescriptionPhotos.css";
+
 interface IFilmGenresProps {
   film: IFilm;
 }
@@ -12,9 +14,6 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
 
   const { films, isLoading, error } = useGetAllFilms();
   const [filteredActors, setFilteredActors] = useState<IFilm[]>([]);
-//   const [selectedPerson, setSelectedPerson] = useState<string>(
-//     film.Starring.find((person) => person.surname)?.surname || ""
-//   );
 
   useEffect(() => {
     if (film?.Starring?.length > 0) {
@@ -36,12 +35,12 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
         <div key={film.id}>
           <div className="film-textDiv">
             <h1 className="description">Description</h1>
-            <p id="film-font">{film.Year}, {film.Genres.map((genre)=>{return genre.name})}, {film.Genres.map((genre)=>{return genre.name})}</p>
-            <p id="film-font">{film.Year}</p> 
-            <p id="film-font">{film.Year}</p>
-            <p id="film-font">{film.Year}</p>
-            <p id="film-font">{film.Year}</p>
-            <p id="film-font">{film.Year}</p>
+            <p id="film-font">{film.Year}, {film.Genres.map((genre)=>{return genre.name})}, {film.Genres.map((genre)=>{return genre.name})}, {film.Country}</p>
+            <p id="film-font">{film.Screenwriter}</p> 
+            <p id="film-font">{film.ReleaseDate}</p>
+            <p id="film-font">{film.Duration}</p>
+            <p id="film-font">{film.FilmCompany}</p>
+            <p id="film-font">{film.Description}</p>
           </div>
   
           <div className="film-photo">
@@ -49,35 +48,42 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
   
             <div className="film-photos">
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
+
               <div className="film-all">
-                <img id="film-photo" src="" alt="" />
+                <img id="film-photo" src="/static/img/actorPhoto.avif" alt="" />
                 <p id="top-cast-font">zxc</p>
               </div>
             </div>
@@ -87,12 +93,14 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
                 <h1 id="top-cast">Photos</h1>
     
                 <div className="film-photos">
-                <img width={453} height={254} src="" alt="" />
-                <img width={453} height={254} src="" alt="" />
-                <img width={453} height={254} src="" alt="" />
-                <img width={453} height={254} src="" alt="" />
+                <img width={453} height={254} src="/static/img/Home-Still.jpg" alt="" />
+                <img width={453} height={254} src="/static/img/aboutPhoto.jpg" alt="" />
+                <img width={453} height={254} src="/static/img/Home-Still.jpg" alt="" />
+                <img width={453} height={254} src="/static/img/aboutPhoto.jpg" alt="" />
                 </div>
             </div>
+
+            <h1 id="top-cast" className="morelikethis">More like this</h1>
 
             <div className="cardsList">
                 {isLoading === false ? (

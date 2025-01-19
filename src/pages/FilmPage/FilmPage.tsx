@@ -27,7 +27,7 @@ export function FilmPage() {
         
         <div className="filmPage">
         <Header></Header>
-        <FilmMainFrame></FilmMainFrame>
+        <FilmMainFrame film={filmState}></FilmMainFrame>
         <FilmDescriptionPhotos film={filmState} ></FilmDescriptionPhotos>
         <FilmComments film={filmState} ></FilmComments>
         <Footer></Footer>
