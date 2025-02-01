@@ -11,7 +11,7 @@ export function useGenre(){
         async function fetchGenres(){
             try {
                 setLoading(true)
-                const response = await fetch('http://localhost:3001/movie/all')
+                const response = await fetch('http://localhost:3001/movies')
                 const genresData = await response.json()
                 setGenres(genresData)
             } catch(error){

@@ -1,16 +1,20 @@
 import { Link } from 'react-router-dom'
 import './CardBunny.css'
 import { IFilm } from '../../hooks/types'
+import { useContext } from 'react'
+import { recentFilmsContext } from '../MovieApp/MovieApp'
 
 interface ICardFilm{
     film: IFilm
 }
 
 export function Card(props: ICardFilm){
+    
     const {film} = props
+    const {addFilms} = useContext(recentFilmsContext)
     
     return (
-        <Link to={`/movie/${film.id}`} >
+        <Link to={`/movie/${film.id}`} onClick={() => {addFilms(film)}}>
             <div className="card">
 
                 <div>

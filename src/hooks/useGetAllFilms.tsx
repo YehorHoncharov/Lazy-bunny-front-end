@@ -9,10 +9,10 @@ export function useGetAllFilms(){
         async function getFilms(){
             try{
                 setIsLoading(true)
-                const response = await fetch('http://localhost:3001/movie/all')
+                const response = await fetch('http://localhost:3001/movies')
                 const films = await response.json()
                 setFilms(films)
-                console.log('data from back-end:', films);
+
                 }
             catch(error){
                 if (error instanceof Error){

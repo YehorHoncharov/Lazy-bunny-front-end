@@ -33,6 +33,6 @@ export interface IActor{
 }
 
 export interface IGenre{
-
+    id: number,
     name: string,
 }
