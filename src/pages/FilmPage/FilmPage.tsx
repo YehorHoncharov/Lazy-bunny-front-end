@@ -13,14 +13,14 @@ import { IFilm } from "../../hooks/types";
 export function FilmPage() {
     
   const {id} = useParams()
-  const {film} = useFilmByID(Number(id))
+  const {film, isLoading} = useFilmByID(Number(id))
+  
   const [filmState, setFilmState] = useState<IFilm>()
   useEffect(() => {
     if (film){
       setFilmState(film)
     }
   }, [film])
-
   return(
     <div>
         {!filmState? <div>No film</div>: 

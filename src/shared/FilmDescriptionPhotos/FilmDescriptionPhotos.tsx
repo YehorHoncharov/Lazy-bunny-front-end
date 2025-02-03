@@ -30,17 +30,16 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
 
   return(
     <div>
-    {filteredActors.map((film) => {
       return (
         <div key={film.id}>
           <div className="film-textDiv">
             <h1 className="description">Description</h1>
-            <p id="film-font">{film.Year}, {film.Genres.map((genre)=>{return genre.name})}, {film.Genres.map((genre)=>{return genre.name})}, {film.Country}</p>
-            <p id="film-font">{film.Screenwriter}</p> 
-            <p id="film-font">{film.ReleaseDate}</p>
-            <p id="film-font">{film.Duration}</p>
-            <p id="film-font">{film.FilmCompany}</p>
-            <p id="film-font">{film.Description}</p>
+            <p id="film-font">Year: {film.Year}, {film.Genres.map((genre)=>{return genre.name})}, {film.Genres.map((genre)=>{return genre.name})}, {film.Country}</p>
+            <p id="film-font">Screenwriter: {film.Screenwriter}</p> 
+            <p id="film-font">Release Date: {film.ReleaseDate}</p>
+            <p id="film-font">Duraction: {film.Duration}</p>
+            <p id="film-font">Film Company: {film.FilmCompany}</p>
+            <p id="film-font">Description: {film.Description}</p>
           </div>
   
           <div className="film-photo">
@@ -130,7 +129,6 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
             </div>
         </div>
       );
-    })}
   </div>
   
   )

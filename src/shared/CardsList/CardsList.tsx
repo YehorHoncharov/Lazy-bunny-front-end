@@ -13,7 +13,7 @@ export function CardsList() {
           films.map((card) => {
             return (
               <Card film={card}
-                // key={card.id}
+                key={card.id}
                 // id={card.id}
                 // Name={card.Name}
                 // ReleaseDate={card.ReleaseDate}

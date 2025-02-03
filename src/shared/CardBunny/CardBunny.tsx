@@ -47,7 +47,7 @@ export function Card(props: ICardFilm){
                 <div className='buttonAndMood'>
                     <button className='buttonTrailer'><img src="/static/img/triangleCardBunny.png" alt="" /> <p>Trailer</p></button>
                     <img src="" alt="" />
-                    <img src={film.MoodImg} alt="" />
+        
                 </div>
     
                 

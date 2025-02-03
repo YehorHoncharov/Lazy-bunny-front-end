@@ -14,7 +14,6 @@ export interface IFilm{
     Language: string,
     FilmCompany: string,
     Starring: IActor[],
-    MoodImg: string,
     Img: string,
     Rating: number,
     Comments: IComment[]
@@ -27,9 +26,14 @@ export interface IComment{
 }
 
 export interface IActor{
-
     name: string,
-    surname: string
+    surname?: string,
+    dateOfBirth: number,
+    placeOfBirth: string,
+    height: number,
+    career: string,
+    totalMovies: number,
+    image: string
 }
 
 export interface IGenre{

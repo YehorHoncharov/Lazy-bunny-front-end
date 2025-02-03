@@ -45,11 +45,10 @@ export function CategoriesOfMovies() {
                 return checkedGenres
             
             })
-            console.log(filterGenre)
+
             return filterGenre
         } 
         const filteredFilms = films.filter((film) => someGenres(film))    
-        console.log(filteredFilms)
         
         return filteredFilms
     }
