@@ -1,5 +1,6 @@
 import { IActor } from "../../hooks/types"
-import { CardsList } from "../CardsList/CardsList";
+import { useGetAllFilms } from "../../hooks/useGetAllFilms";
+import { Card } from "../CardBunny/CardBunny";
 import "./Actor.css"
 
 interface IActorProps {
@@ -7,6 +8,19 @@ interface IActorProps {
   }
 
 export function Actor({actor}: IActorProps) {
+
+    const {films, isLoading, error} = useGetAllFilms()
+
+    const filterFilm = films.filter((film) => {
+        console.log(film.Actors)
+        return film.Actors.some((actorThis) => actorThis.surname === actor.surname)
+    }
+        
+        
+    );
+
+    console.log(filterFilm)
+
     return (
         <div className="MainDivActor">
             <h1 className="ActorH1" id="actorText">{actor.name}</h1>
@@ -24,7 +38,9 @@ export function Actor({actor}: IActorProps) {
                 </div>
             </div>
             <h1 className="H1Movies">Movies</h1>
-            <CardsList />
+            {filterFilm.slice(0, 10).map((film) => {
+                return <Card film={film} key={film.id}></Card>
+            })}
             <h1 className="H1More">More</h1>
         </div>
 )

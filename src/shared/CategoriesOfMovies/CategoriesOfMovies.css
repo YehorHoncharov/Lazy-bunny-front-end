@@ -21,3 +21,13 @@
     gap: 20px;
     margin-bottom: 30px;
 }
+
+.filteredFilm{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-bottom: 40px; */
+}

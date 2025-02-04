@@ -27,7 +27,7 @@ export function CategoriesOfMovies() {
         function checkGenre(genre: IGenre) {
             return recentFilms.some((recentFilm) =>{
                 const filteredGenres = recentFilm.Genres.some((recentGenre) => {
-                    return recentGenre.id === genre.id
+                    return recentGenre.name === genre.name
                 })
                 return filteredGenres
                 // console.log(filteredGenres)
@@ -64,7 +64,7 @@ export function CategoriesOfMovies() {
                     <img src="/static/img/SectionsFilms.png" alt="" />
                 </div>
 
-                <div>
+                <div className="filteredFilm">
                     {recomendedFilms.map((film, index) => {
                     if (index < 5){
                         return <Card film={film}></Card>

@@ -16,11 +16,11 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
   const [filteredActors, setFilteredActors] = useState<IFilm[]>([]);
 
   useEffect(() => {
-    if (film?.Starring?.length > 0) {
-      const filmActors = film.Starring.map((actor) => actor.surname);
+    if (film?.Actors?.length > 0) {
+      const filmActors = film.Actors.map((actor) => actor.surname);
 
       const filtered = films.filter((movie) =>
-        movie.Starring.some((actor) => filmActors.includes(actor.surname))
+        movie.Actors.some((actor) => filmActors.includes(actor.surname))
       );
       setFilteredActors(filtered);
     } else {
@@ -104,7 +104,7 @@ export function FilmDescriptionPhotos({ film }: IFilmGenresProps) {
             <div className="cardsList">
                 {isLoading === false ? (
                 error === undefined ? (
-                    filteredActors.map((card) => {
+                    filteredActors.slice(0, 5).map((card) => {
                     return (
                         <Card film={card}></Card>
                     );

@@ -28,11 +28,11 @@ export function Card(props: ICardFilm){
                     <img src="/static/img/FullStar.png" alt="" />
                     <img src="/static/img/FullStar.png" alt="" />
                     <img src="/static/img/HalfStar.png" alt="" />
-                    <p>{film.Rating}/5</p>
+                    <p>{film.Rating}/10</p>
                 </div>
 
                 <div>
-                    <p className='movieLables movieName'>{film.Name}</p>
+                    <p className='movieLables movieName'>{film.Name.slice(0,19)}</p>
                 </div>
 
 

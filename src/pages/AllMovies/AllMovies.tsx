@@ -21,19 +21,38 @@ export function AllMovies() {
 
   const { films, isLoading, error } = useGetAllFilms();
   const [filteredMovies, setFilteredMovies] = useState(films);
-  const [selectedGenre, setSelectedGenre] = useState("AllGenre");
+  const [selectedGenre, setSelectedGenre] = useState([""]);
+
+  const genreChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
+    const choosenGenre = event.target.value
+
+    setSelectedGenre((prevGenres) => {
+      if (choosenGenre === "AllGenre") {
+        setFilteredMovies(films)
+        return []
+      }
+      
+      return prevGenres.includes(choosenGenre)
+        ? prevGenres.filter((genre) => genre !== choosenGenre)
+        : [...prevGenres, choosenGenre]
+    });
+
+
+  }
+
 
   useEffect(() => {
-    if (selectedGenre === "AllGenre") {
+    if (selectedGenre.length === 0) {
       setFilteredMovies(films);
     } else {
       setFilteredMovies(
         films.filter((movie) => {
-          return movie.Genres.filter((genre) => { 
-            return genre.name === selectedGenre
+          return movie.Genres.some((genre) => { 
+            return selectedGenre.includes(genre.name)
           })
         })
       );
+      // console.log(filteredMovies)
     }
   }, [selectedGenre, films]);
 
@@ -57,19 +76,15 @@ export function AllMovies() {
           /> : genresError ? <h1>{genresError}</h1> : 
           
           <select
-          className="chooseGenre"
-          onChange={(event) => {
-            setSelectedGenre(event.target.value);
-          }}
-        >
-          <option value="AllGenre">All genre</option>
-
-          {/* {films.map((film) => {
-            return film.Genres.map((genre) => {
-              return <option value={genre.name}>{genre.name}</option>;
-            })
-          })} */}
-        </select>
+            className="chooseGenre"
+            onChange={genreChange}>
+            <option value="AllGenre">All genre</option>
+            {films.map((film) => {
+              return film.Genres.map((genre) => {
+                return <option value={genre.name}>{genre.name}</option>;
+              })
+            })}
+          </select>
 
         // <select className="chooseYear">
         //   <option value="">Year</option>
@@ -88,6 +103,9 @@ export function AllMovies() {
         }
           
         </div>
+      </div>
+      <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+        <p style={{fontSize: "24", color: "white", fontWeight: "bold"}}>{selectedGenre}</p>
       </div>
 
       <div className="cardsList">
@@ -120,3 +138,5 @@ export function AllMovies() {
     </div>
   );
 }
+
+

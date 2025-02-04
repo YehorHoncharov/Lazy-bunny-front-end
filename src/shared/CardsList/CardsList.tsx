@@ -10,7 +10,7 @@ export function CardsList() {
     <div className="cardsList">
       {isLoading === false ? (
         error === undefined ? (
-          films.map((card) => {
+          films.slice(0, 12).map((card) => {
             return (
               <Card film={card}
                 key={card.id}

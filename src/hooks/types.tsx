@@ -13,7 +13,7 @@ export interface IFilm{
     Description: string,
     Language: string,
     FilmCompany: string,
-    Starring: IActor[],
+    Actors: IActor[],
     Img: string,
     Rating: number,
     Comments: IComment[]
